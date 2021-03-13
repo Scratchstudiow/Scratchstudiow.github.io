@@ -1,6 +1,11 @@
 <html>
     <head>
       <title>ScratchStudio Webpage</title>
+      <script src="https://cdn.bootcss.com/ace/1.4.6/ace.js"></script>
+      <script src="https://cdn.bootcss.com/ace/1.4.6/ext-beautify.js"></script>
+      <script src="https://cdn.bootcss.com/ace/1.4.6/ext-language_tools.js"></script>
+      <script src="https://cdn.bootcss.com/ace/1.4.6/mode-javascript.js"></script>
+      <script src="https://cdn.bootcss.com/ace/1.4.6/theme-xcode.js"></script>
       <link rel="shortcut icon" href="Statics/ico.ico" >
         <link
             rel="stylesheet"
@@ -22,6 +27,7 @@
               <a href="#tab1" class="mdui-ripple mdui-ripple-white">Home 主页</a>
               <a href="#tab2" class="mdui-ripple mdui-ripple-white">Members 成员</a>
               <a href="#tab3" class="mdui-ripple mdui-ripple-white">Activities 活动</a>
+              <a href="#tab4" class="mdui-ripple mdui-ripple-white">Editor 编辑器</a>
             </div>
         </div>
       </div>
@@ -144,6 +150,20 @@
               <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
               <div align="center"><i class="mdui-icon material-icons" style="opacity: 0.5;">clear</i></div>
               <h3 style="text-align: center;opacity: 0.5;">看起来还没有活动……</h3>
+            </div>
+            <div id="tab4">
+              <div class="convertImage">
+                <div class="title">
+                    JSON
+                </div>
+                <div class="content">
+                    <div id="editor">{name: 'jack', age: '20'}</div>
+                    <div class="btn-group button" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default" @click="jsonFormat">Json 格式化（format)</button>
+                        <button type="button" class="btn btn-default" @click="jsonEncode">Json 压缩</button>
+                    </div>
+                </div>
+            </div>
             </div>
           </div>
         <script
