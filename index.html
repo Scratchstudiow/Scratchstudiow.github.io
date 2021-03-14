@@ -155,22 +155,15 @@
               <h3 style="text-align: center;opacity: 0.5;">看起来还没有活动……</h3>
             </div>
             <div id="tab4">
-              <div id="wrapper">
-                <div class="content" style="width: 950px">
-                    <div class="column1" style="margin-top: 47px">
-                        <textarea id="textarea" style="width:800px; height:500px">
-                /**
-                 * This is Ace injected using a bookmarklet.
-                 */
-                function foo() {
-                    var bar = true;
+              <div id="editor">
+                function foo(items) {
+                    var x = "All this is syntax highlighted";
+                    return x;
                 }
-                        </textarea>
-                    </div>
                 </div>
                 
-                <script> function inject(options, callback) { var baseUrl = options.baseUrl || "../../src-noconflict"; var load = function(path, callback) { var head = document.getElementsByTagName('head')[0]; var s = document.createElement('script'); s.src = baseUrl + "/" + path; head.appendChild(s); s.onload = s.onreadystatechange = function(_, isAbort) { if (isAbort || !s.readyState || s.readyState == "loaded" || s.readyState == "complete") { s = s.onload = s.onreadystatechange = null; if (!isAbort) callback(); } }; }; load("ace.js", function() { ace.config.loadModule("ace/ext/textarea", function() { var event = ace.require("ace/lib/event"); var areas = document.getElementsByTagName("textarea"); for (var i = 0; i < areas.length; i++) { event.addListener(areas[i], "click", function(e) { if (e.detail == 3) { ace.transformTextarea(e.target, options.ace); } }); } callback && callback(); }); }); } // Call the inject function to load the ace files. var textAce; inject({}, function () { // Transform the textarea on the page into an ace editor.  var t = document.querySelector("textarea"); textAce = ace.require("ace/ext/textarea").transformTextarea(t); setTimeout(function(){textAce.setDisplaySettings(false)}); }); </script>
-            </div>
+                <script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+                <script> var editor = ace.edit("editor"); editor.setTheme("ace/theme/monokai"); editor.getSession().setMode("ace/mode/javascript"); </script>
           </div>
         <script
             src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
