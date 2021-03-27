@@ -1,173 +1,213 @@
 <html>
-    <head>
-      <title>ScratchStudio Webpage</title>
-      <style type="text/css" media="screen"> #editor { position: absolute; top: 130px;right: 0; bottom: 0; left: 0; } </style>
-      <script src="http://cdn.bootcss.com/ace/1.2.4/ace.js"></script>
-      <script src="http://cdn.bootcss.com/ace/1.2.4/ext-language_tools.js"></script>
-      <script src="https://cdn.bootcss.com/ace/1.4.6/ace.js"></script>
-      <script src="https://cdn.bootcss.com/ace/1.4.6/ext-beautify.js"></script>
-      <script src="https://cdn.bootcss.com/ace/1.4.6/ext-language_tools.js"></script>
-      <script src="https://cdn.bootcss.com/ace/1.4.6/mode-javascript.js"></script>
-      <script src="https://cdn.bootcss.com/ace/1.4.6/theme-xcode.js"></script>
-      <link rel="shortcut icon" href="Statics/ico.ico" >
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
-            integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw"
-            crossorigin="anonymous"
-        />
-    </head>
-    <body>
-      <div class="mdui-appbar-scroll-hide">
-        <div class="mdui-appbar">
-            <div class="mdui-toolbar mdui-color-indigo">
-              <a href="https://shequ.codemao.cn/work_shop/5581" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
-              <a href="javascript:;" class="mdui-typo-title">ScratchStudio</a>
-              <div class="mdui-toolbar-spacer"></div>
-              <a onclick="location.reload();" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>
-            </div>
-            <div class="mdui-tab mdui-color-indigo" mdui-tab>
-              <a href="#tab1" class="mdui-ripple mdui-ripple-white">Home 主页</a>
-              <a href="#tab2" class="mdui-ripple mdui-ripple-white">Members 成员</a>
-              <a href="#tab3" class="mdui-ripple mdui-ripple-white">Activities 活动</a>
-              <a href="#tab4" class="mdui-ripple mdui-ripple-white">Editor 编辑器</a>
-            </div>
-        </div>
+
+<head>
+  <title>ScratchStudio Webpage</title>
+  <style>
+    .adcard {
+      position: absolute;
+      background-color: rgb(157, 208, 238);
+      width: 20%;
+      height: 35%;
+      border-radius: 5%;
+    }
+  </style>
+  <style type="text/css" media="screen">
+    #editor {
+      position: absolute;
+      top: 130px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  </style>
+  <script src="http://cdn.bootcss.com/ace/1.2.4/ace.js"></script>
+  <script src="http://cdn.bootcss.com/ace/1.2.4/ext-language_tools.js"></script>
+  <script src="https://cdn.bootcss.com/ace/1.4.6/ace.js"></script>
+  <script src="https://cdn.bootcss.com/ace/1.4.6/ext-beautify.js"></script>
+  <script src="https://cdn.bootcss.com/ace/1.4.6/ext-language_tools.js"></script>
+  <script src="https://cdn.bootcss.com/ace/1.4.6/mode-javascript.js"></script>
+  <script src="https://cdn.bootcss.com/ace/1.4.6/theme-xcode.js"></script>
+  <link rel="shortcut icon" href="Statics/ico.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
+    integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="mdui-appbar-scroll-hide">
+    <div class="mdui-appbar">
+      <div class="mdui-toolbar mdui-color-indigo">
+        <a href="https://shequ.codemao.cn/work_shop/5581" class="mdui-btn mdui-btn-icon"><i
+            class="mdui-icon material-icons">menu</i></a>
+        <a href="javascript:;" class="mdui-typo-title">ScratchStudio</a>
+        <div class="mdui-toolbar-spacer"></div>
+        <a onclick="location.reload();" class="mdui-btn mdui-btn-icon"><i
+            class="mdui-icon material-icons">refresh</i></a>
       </div>
-        <div class="mdui-container-fluid">
-            <div id="tab1" style="margin-left: 200px;margin-right: 200px;;">
-              <a href="docs1.html">
-                <div class="mdui-grid-tile" style="border-radius:10px;">
-                  <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3647236305,4267246324&fm=26&gp=0.jpg"/>
-                  <div class="mdui-grid-tile-actions">
-                    <div class="mdui-grid-tile-text">
-                      <div class="mdui-grid-tile-title">Join us!ScratchStudio</div>
-                      <div class="mdui-grid-tile-subtitle"><i class="mdui-icon material-icons">code</i>ScratchMaster</div>
-                    </div>
-                    <div class="mdui-grid-tile-buttons">
-                      <button class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">chevron_right</i></button>
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <a href="docs2.html">
-                <div class="mdui-grid-tile" style="border-radius:10px;">
-                  <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2351604051,3381108981&fm=26&gp=0.jpg"/>
-                  <div class="mdui-grid-tile-actions">
-                    <div class="mdui-grid-tile-text">
-                      <div class="mdui-grid-tile-title">同步Github与本地文件夹的简便方法!</div>
-                      <div class="mdui-grid-tile-subtitle"><i class="mdui-icon material-icons">code</i>ScratchMaster</div>
-                    </div>
-                    <div class="mdui-grid-tile-buttons">
-                      <button class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">chevron_right</i></button>
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <a href="docs3.html">
-                <div class="mdui-grid-tile" style="border-radius:10px;">
-                  <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1153382753,13536527&fm=26&gp=0.jpg"/>
-                  <div class="mdui-grid-tile-actions">
-                    <div class="mdui-grid-tile-text">
-                      <div class="mdui-grid-tile-title">为何搜索Scratch能看见BCM?</div>
-                      <div class="mdui-grid-tile-subtitle"><i class="mdui-icon material-icons">code</i>ScratchMaster</div>
-                    </div>
-                    <div class="mdui-grid-tile-buttons">
-                      <button class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">chevron_right</i></button>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            
-            <a href="docs4.html">
-              <div class="mdui-grid-tile" style="border-radius:10px;">
-                <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1153382753,13536527&fm=26&gp=0.jpg"/>
-                <div class="mdui-grid-tile-actions">
-                  <div class="mdui-grid-tile-text">
-                    <div class="mdui-grid-tile-title">Javascript!<i>给对象添加方法</i></div>
-                    <div class="mdui-grid-tile-subtitle"><i class="mdui-icon material-icons">code</i>ScratchMaster</div>
-                  </div>
-                  <div class="mdui-grid-tile-buttons">
-                    <button class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">chevron_right</i></button>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          </div>
-            <div id="tab2">
-              <h1 style="margin-left: 60px;font-size: 100px;">室长</h1>
-              <hr>
-              <div style="margin-left: 100px;margin-top: 100px;margin-right: 100px;">
-                <table>
-                  <tr>
-                      <td style="left: 0">
-                          <img src="https://cdn-community.codemao.cn/47/community/d2ViXzEwMDFfNjkyMzcwMl82OTIzNzAyXzE2MDQ4MTgwNjYxMzNfN2U2NWQzNjQ.png" alt="我去！你的ScratchMaster头像还在加载的路上！" style="border-radius: 50%;overflow: hidden;">
-                      </td>
-                      <td style="right: 0">
-                          <h1 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">ScratchMaster</h1>
-                          <h3>一个非常喜欢Scratch的bcm用户<br>也喜欢Box3</h3>
-                      </td>
-                      <td style="right: 1">
-                          <h1>|<br>|<br>|</h1>
-                      </td>
-                      <td style="right: 2">
-                          <h3>我的个人主页：https://shequ.codemao.cn/user/6923702（别看作品，太水）</h3>
-                          <h3>我的工作室:https://shequ.codemao.cn/work_shop/5581</h3>
-                          <h3>我的Box3主页:https://box3.codemao.cn/u/HrvxxhD6b4jV590 (没错我在社区和Box3的名字不同)</h3>
-                      </td>
-                  </tr>
-              </table>
-              <hr>
-              <h1 style="text-align: center;">我的唯二的比较用心的Box3地图<small class="mdui-typo-display-1-opacity"><i>点击地图名字前往</i></small></h1>
-              <table>
-                  <td style="left: 0;">
-                  <table>
-                      <td style="left: 0">
-                          <img src="https://static.box3.codemao.cn/img/Qmf5NghqHKSd2wYg6rsggGMkU4kNqnXkfkbWBAu9BAqrBr_186_186_cover.png" alt="还没加载好……假装这是封面啦~" style="border-radius: 80%;overflow: hidden;">
-                      </td>
-                      <td style="right: 0">
-                          <a href="https://box3.codemao.cn/g/73894" style="text-decoration: none;"><h1>Waterfall0.1-ScratchMaster</h1></a>
-                          <h2>其实一开始就是测试一下方块填充代码，没想到就做着做着上首页了……</h2>
-                      </td>
-                  </table>
-              </td>
-              <td style="right: 0;">
-                  <table>
-                      <td style="left: 0">
-                          <img src="https://static.box3.codemao.cn/img/QmSEyvGVdnmCJgGAfRzrKCy8Xwu82AhF3hbjKfHoGcNsu8_186_186_cover.avif" alt="还没加载好……假装这是封面啦~" style="border-radius: 80%;overflow: hidden;">
-                      </td>
-                      <td style="right: 0">
-                          <a href="https://box3.codemao.cn/g/78413" style="text-decoration: none;"><h1>雪地Unfinished-ScratchMaster</h1></a>
-                          <h2>这个还没完成，但已经比Waterfall付出的多了，至今沉睡在角落里……</h2>
-                      </td>
-                  </table>
-              </td>
-              </table>
-              </div>
-            <hr>
-            <h1 style="margin-left: 60px;font-size: 100px;">室员</h1>
-            <hr>
+      <div class="mdui-tab mdui-color-indigo" mdui-tab>
+        <a href="#home" class="mdui-ripple mdui-ripple-white">Home 主页</a>
+        <a href="#tab1" class="mdui-ripple mdui-ripple-white">Article 文章</a>
+        <a href="#tab2" class="mdui-ripple mdui-ripple-white">Members 成员</a>
+        <a href="#tab3" class="mdui-ripple mdui-ripple-white">Activities 活动</a>
+        <a href="#tab4" class="mdui-ripple mdui-ripple-white">Editor 编辑器</a>
+      </div>
+    </div>
+  </div>
+  <div class="mdui-container-fluid">
+    <div id="home">
+      <div class="adcard" id="card-lt">
+        <a>
+          <img scr="static/PointCode.jpg" alt="pic" />
+          <h2>PointCode官网建立</h2>
+          <p>说明</p>
+        </a>
+      </div>
+    </div>
+    <div id="tab1" style="margin-left: 200px;margin-right: 200px;;">
+      <a href="docs1.html">
+        <div class="mdui-grid-tile" style="border-radius:10px;">
+          <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3647236305,4267246324&fm=26&gp=0.jpg" />
+          <div class="mdui-grid-tile-actions">
+            <div class="mdui-grid-tile-text">
+              <div class="mdui-grid-tile-title">Join us!ScratchStudio</div>
+              <div class="mdui-grid-tile-subtitle"><i class="mdui-icon material-icons">code</i>ScratchMaster</div>
             </div>
-            <div id="tab3">
-              <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-              <div align="center"><i class="mdui-icon material-icons" style="opacity: 0.5;">clear</i></div>
-              <h3 style="text-align: center;opacity: 0.5;">看起来还没有活动……</h3>
+            <div class="mdui-grid-tile-buttons">
+              <button class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">chevron_right</i></button>
             </div>
-            <div id="tab4">
-              <div id="editor">
-                <textarea id="textarea" style="width:800px; height:500px">
+          </div>
+        </div>
+      </a>
+      <a href="docs2.html">
+        <div class="mdui-grid-tile" style="border-radius:10px;">
+          <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2351604051,3381108981&fm=26&gp=0.jpg" />
+          <div class="mdui-grid-tile-actions">
+            <div class="mdui-grid-tile-text">
+              <div class="mdui-grid-tile-title">同步Github与本地文件夹的简便方法!</div>
+              <div class="mdui-grid-tile-subtitle"><i class="mdui-icon material-icons">code</i>ScratchMaster</div>
+            </div>
+            <div class="mdui-grid-tile-buttons">
+              <button class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">chevron_right</i></button>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="docs3.html">
+        <div class="mdui-grid-tile" style="border-radius:10px;">
+          <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1153382753,13536527&fm=26&gp=0.jpg" />
+          <div class="mdui-grid-tile-actions">
+            <div class="mdui-grid-tile-text">
+              <div class="mdui-grid-tile-title">为何搜索Scratch能看见BCM?</div>
+              <div class="mdui-grid-tile-subtitle"><i class="mdui-icon material-icons">code</i>ScratchMaster</div>
+            </div>
+            <div class="mdui-grid-tile-buttons">
+              <button class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">chevron_right</i></button>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="docs4.html">
+        <div class="mdui-grid-tile" style="border-radius:10px;">
+          <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1153382753,13536527&fm=26&gp=0.jpg" />
+          <div class="mdui-grid-tile-actions">
+            <div class="mdui-grid-tile-text">
+              <div class="mdui-grid-tile-title">顺滑的拽出特效</div>
+              <div class="mdui-grid-tile-subtitle"><i class="mdui-icon material-icons">code</i>ScratchMaster</div>
+            </div>
+            <div class="mdui-grid-tile-buttons">
+              <button class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">chevron_right</i></button>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div id="tab2">
+    <h1 style="margin-left: 60px;font-size: 100px;">室长</h1>
+    <hr>
+    <div style="margin-left: 100px;margin-top: 100px;margin-right: 100px;">
+      <table>
+        <tr>
+          <td style="left: 0">
+            <img
+              src="https://cdn-community.codemao.cn/47/community/d2ViXzEwMDFfNjkyMzcwMl82OTIzNzAyXzE2MDQ4MTgwNjYxMzNfN2U2NWQzNjQ.png"
+              alt="我去！你的ScratchMaster头像还在加载的路上！" style="border-radius: 50%;overflow: hidden;">
+          </td>
+          <td style="right: 0">
+            <h1
+              style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+              ScratchMaster</h1>
+            <h3>一个非常喜欢Scratch的bcm用户<br>也喜欢Box3</h3>
+          </td>
+          <td style="right: 1">
+            <h1>|<br>|<br>|</h1>
+          </td>
+          <td style="right: 2">
+            <h3>我的个人主页：https://shequ.codemao.cn/user/6923702（别看作品，太水）</h3>
+            <h3>我的工作室:https://shequ.codemao.cn/work_shop/5581</h3>
+            <h3>我的Box3主页:https://box3.codemao.cn/u/HrvxxhD6b4jV590 (没错我在社区和Box3的名字不同)</h3>
+          </td>
+        </tr>
+      </table>
+      <hr>
+      <h1 style="text-align: center;">我的唯二的比较用心的Box3地图<small class="mdui-typo-display-1-opacity"><i>点击地图名字前往</i></small>
+      </h1>
+      <table>
+        <td style="left: 0;">
+          <table>
+            <td style="left: 0">
+              <img
+                src="https://static.box3.codemao.cn/img/Qmf5NghqHKSd2wYg6rsggGMkU4kNqnXkfkbWBAu9BAqrBr_186_186_cover.png"
+                alt="还没加载好……假装这是封面啦~" style="border-radius: 80%;overflow: hidden;">
+            </td>
+            <td style="right: 0">
+              <a href="https://box3.codemao.cn/g/73894" style="text-decoration: none;">
+                <h1>Waterfall0.1-ScratchMaster</h1>
+              </a>
+              <h2>其实一开始就是测试一下方块填充代码，没想到就做着做着上首页了……</h2>
+            </td>
+          </table>
+        </td>
+        <td style="right: 0;">
+          <table>
+            <td style="left: 0">
+              <img
+                src="https://static.box3.codemao.cn/img/QmSEyvGVdnmCJgGAfRzrKCy8Xwu82AhF3hbjKfHoGcNsu8_186_186_cover.avif"
+                alt="还没加载好……假装这是封面啦~" style="border-radius: 80%;overflow: hidden;">
+            </td>
+            <td style="right: 0">
+              <a href="https://box3.codemao.cn/g/78413" style="text-decoration: none;">
+                <h1>雪地Unfinished-ScratchMaster</h1>
+              </a>
+              <h2>这个还没完成，但已经比Waterfall付出的多了，至今沉睡在角落里……</h2>
+            </td>
+          </table>
+        </td>
+      </table>
+    </div>
+    <hr>
+    <h1 style="margin-left: 60px;font-size: 100px;">室员</h1>
+    <hr>
+  </div>
+  <div id="tab3">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div align="center"><i class="mdui-icon material-icons" style="opacity: 0.5;">clear</i></div>
+    <h3 style="text-align: center;opacity: 0.5;">看起来还没有活动……</h3>
+  </div>
+  <div id="tab4">
+    <div id="editor">
+      <textarea id="textarea" style="width:800px; height:500px">
                 print("Welcome to ScratchStudio!")
-                </textarea></div>
-                
-                <script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-                <script> var editor = ace.edit("editor"); editor.setTheme("ace/theme/monokai"); editor.getSession().setMode("ace/mode/python"); </script>
-                <script> function inject(options, callback) { var baseUrl = options.baseUrl || "../../src-noconflict"; var load = function(path, callback) { var head = document.getElementsByTagName('head')[0]; var s = document.createElement('script'); s.src = baseUrl + "/" + path; head.appendChild(s); s.onload = s.onreadystatechange = function(_, isAbort) { if (isAbort || !s.readyState || s.readyState == "loaded" || s.readyState == "complete") { s = s.onload = s.onreadystatechange = null; if (!isAbort) callback(); } }; }; load("ace.js", function() { ace.config.loadModule("ace/ext/textarea", function() { var event = ace.require("ace/lib/event"); var areas = document.getElementsByTagName("textarea"); for (var i = 0; i < areas.length; i++) { event.addListener(areas[i], "click", function(e) { if (e.detail == 3) { ace.transformTextarea(e.target, options.ace); } }); } callback && callback(); }); }); } // Call the inject function to load the ace files. var textAce; inject({}, function () { // Transform the textarea on the page into an ace editor.  var t = document.querySelector("textarea"); textAce = ace.require("ace/ext/textarea").transformTextarea(t); setTimeout(function(){textAce.setDisplaySettings(false)}); }); </script>
-          </div>
-        <script
-            src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
-            integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+                </textarea>
+    </div>
+
+    <script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script> var editor = ace.edit("editor"); editor.setTheme("ace/theme/monokai"); editor.getSession().setMode("ace/mode/python");</script>
+    <script> function inject(options, callback) { var baseUrl = options.baseUrl || "../../src-noconflict"; var load = function (path, callback) { var head = document.getElementsByTagName('head')[0]; var s = document.createElement('script'); s.src = baseUrl + "/" + path; head.appendChild(s); s.onload = s.onreadystatechange = function (_, isAbort) { if (isAbort || !s.readyState || s.readyState == "loaded" || s.readyState == "complete") { s = s.onload = s.onreadystatechange = null; if (!isAbort) callback(); } }; }; load("ace.js", function () { ace.config.loadModule("ace/ext/textarea", function () { var event = ace.require("ace/lib/event"); var areas = document.getElementsByTagName("textarea"); for (var i = 0; i < areas.length; i++) { event.addListener(areas[i], "click", function (e) { if (e.detail == 3) { ace.transformTextarea(e.target, options.ace); } }); } callback && callback(); }); }); } // Call the inject function to load the ace files. var textAce; inject({}, function () { // Transform the textarea on the page into an ace editor.  var t = document.querySelector("textarea"); textAce = ace.require("ace/ext/textarea").transformTextarea(t); setTimeout(function(){textAce.setDisplaySettings(false)}); }); </script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
+    integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
